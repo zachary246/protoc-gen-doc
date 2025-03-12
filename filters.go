@@ -33,16 +33,16 @@ func NoBrFilter(content string) string {
 	// First normalize all line endings to \n
 	normalized := strings.Replace(content, "\r\n", "\n", -1)
 	normalized = strings.Replace(normalized, "\r", "\n", -1)
-	
+
 	// Split content into lines, preserving all line breaks
 	lines := strings.Split(normalized, "\n")
-	
+
 	// Process each line to clean up extra spaces
 	for i, line := range lines {
 		// Trim spaces and replace multiple spaces with single space
 		lines[i] = spacePattern.ReplaceAllString(strings.TrimSpace(line), " ")
 	}
-	
+
 	// Join lines back together, preserving all line breaks
 	return strings.Join(lines, "\n")
 }
