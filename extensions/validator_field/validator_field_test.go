@@ -5,9 +5,9 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	validator "github.com/mwitkow/go-proto-validators"
-	"github.com/pseudomuto/protoc-gen-doc/extensions"
-	. "github.com/pseudomuto/protoc-gen-doc/extensions/validator_field"
 	"github.com/stretchr/testify/require"
+	"github.com/zachary246/protoc-gen-doc/extensions"
+	. "github.com/zachary246/protoc-gen-doc/extensions/validator_field"
 )
 
 func TestTransform(t *testing.T) {
